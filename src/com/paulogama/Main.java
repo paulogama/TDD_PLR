@@ -27,8 +27,6 @@ public class Main {
 
         Employee employee = new Employee(post, performance);
 
-        Calculator calculator = new Calculator();
-
-        System.out.println("The value of profit is -> " + calculator.profit(company, employee));
+        System.out.println("The value of profit is -> " + employee.profit(company));
     }
 }

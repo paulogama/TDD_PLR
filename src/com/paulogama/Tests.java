@@ -28,49 +28,43 @@ class Tests {
     void testEligibility() {
         Company company = new Company(13, 150000);
 
-        Calculator calculator = new Calculator();
-        assertTrue(calculator.isEligible(company));
+        assertTrue(company.isEligible());
     }
 
     @Test
     void testNotEligibility() {
         Company company = new Company(423, 4000000);
 
-        Calculator calculator = new Calculator();
-        assertFalse(calculator.isEligible(company));
+        assertFalse(company.isEligible());
     }
 
     @Test
     void testMultiplierTrainee() {
         Employee employee = new Employee("Trainee", 2);
-        Calculator calculator = new Calculator();
 
-        assertEquals(1, calculator.multiplier(employee));
+        assertEquals(1, employee.multiplier());
     }
 
     @Test
     void testMultiplierAnalyst() {
         Employee employee = new Employee("Analyst", 1);
-        Calculator calculator = new Calculator();
 
-        assertEquals(2, calculator.multiplier(employee));
+        assertEquals(2, employee.multiplier());
     }
 
     @Test
     void testMultiplierManager() {
         Employee employee = new Employee("Manager", 4);
-        Calculator calculator = new Calculator();
 
-        assertEquals(3, calculator.multiplier(employee));
+        assertEquals(3, employee.multiplier());
     }
 
     @Test
     void testProfit() {
         Company company = new Company(4000, 5931500);
         Employee employee = new Employee("Manager", 5);
-        Calculator calculator = new Calculator();
 
-        assertEquals(8897.25, calculator.profit(company, employee));
+        assertEquals(8897.25, employee.profit(company));
     }
 
 }
