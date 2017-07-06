@@ -7,12 +7,14 @@ package com.paulogama;
 
 public class Trainee extends Employee {
 
-    Trainee(String post, int performance) {
-        super(post, performance);
+    Trainee(int performance) {
+        super(performance);
     }
 
-    int multiplier() {
+    @Override
+    public int multiplier() {
         return 1;
     }
+
 
 }

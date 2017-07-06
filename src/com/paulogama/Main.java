@@ -25,8 +25,8 @@ public class Main {
 
         int performance = scanner.nextInt();
 
-        Employee employee = new Employee(post, performance);
-
-        System.out.println("The value of profit is -> " + employee.profit(company));
+//        Employee employee = new Employee(post, performance);
+//
+//        System.out.println("The value of profit is -> " + employee.profit(company));
     }
 }
