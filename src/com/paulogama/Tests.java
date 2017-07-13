@@ -41,6 +41,7 @@ class Tests {
     @Test
     void testMultiplierTrainee() {
         Trainee trainee = new Trainee(2);
+
         assertEquals(1, trainee.multiplier());
     }
 

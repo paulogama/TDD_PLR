@@ -5,7 +5,7 @@ package com.paulogama;
  */
 public class Manager extends Post {
 
-    public Manager(int performance) {
+    Manager(int performance) {
         super(performance);
     }
 

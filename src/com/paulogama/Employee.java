@@ -18,4 +18,5 @@ class Employee {
     public double profit(int profitMargin, int employeesCount) {
         return performance * post.multiplier() * (0.4 * profitMargin / employeesCount);
     }
+
 }
