@@ -6,7 +6,7 @@ package com.paulogama;
  */
 
 class Calculator {
-    Boolean isEligible(Company company) {
+    /*Boolean isEligible(Company company) {
         return company.employeesCount * 10000 < company.profitMargin;
     }
 
@@ -24,6 +24,6 @@ class Calculator {
     }
 
     double profit(Company company, Employee employee) {
-        return employee.performance * multiplier(employee) * (0.4 * company.profitMargin / company.employeesCount);
-    }
+        return employee.performance * employee.multiplier() * (0.4 * company.profitMargin / company.employeesCount);
+    }*/
 }

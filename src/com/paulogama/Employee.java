@@ -7,11 +7,15 @@ package com.paulogama;
 
 class Employee {
 
-    String post;
+    IPost post;
     int performance;
 
-    Employee(String post, int performance) {
+    Employee(IPost post, int performance) {
         this.post = post;
         this.performance = performance;
+    }
+
+    public double profit(int profitMargin, int employeesCount) {
+        return performance * post.multiplier() * (0.4 * profitMargin / employeesCount);
     }
 }

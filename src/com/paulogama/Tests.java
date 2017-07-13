@@ -20,57 +20,52 @@ class Tests {
 
     @Test
     void testPerformance() {
-        Employee employee = new Employee("Trainee", 2);
-        assertEquals(2, employee.performance);
+        Trainee trainee = new Trainee(2);
+        assertEquals(2, trainee.performance);
     }
 
     @Test
     void testEligibility() {
         Company company = new Company(13, 150000);
 
-        Calculator calculator = new Calculator();
-        assertTrue(calculator.isEligible(company));
+        assertTrue(company.isEligible());
     }
 
     @Test
     void testNotEligibility() {
         Company company = new Company(423, 4000000);
 
-        Calculator calculator = new Calculator();
-        assertFalse(calculator.isEligible(company));
+        assertFalse(company.isEligible());
     }
 
     @Test
     void testMultiplierTrainee() {
-        Employee employee = new Employee("Trainee", 2);
-        Calculator calculator = new Calculator();
-
-        assertEquals(1, calculator.multiplier(employee));
+        Trainee trainee = new Trainee(2);
+        assertEquals(1, trainee.multiplier());
     }
 
     @Test
     void testMultiplierAnalyst() {
-        Employee employee = new Employee("Analyst", 1);
-        Calculator calculator = new Calculator();
+        Analyst analyst = new Analyst(1);
 
-        assertEquals(2, calculator.multiplier(employee));
+        assertEquals(2, analyst.multiplier());
     }
 
     @Test
     void testMultiplierManager() {
-        Employee employee = new Employee("Manager", 4);
-        Calculator calculator = new Calculator();
+        Manager manager = new Manager(4);
 
-        assertEquals(3, calculator.multiplier(employee));
+        assertEquals(3, manager.multiplier());
     }
 
     @Test
     void testProfit() {
+        Manager manager = new Manager(5);
         Company company = new Company(4000, 5931500);
-        Employee employee = new Employee("Manager", 5);
-        Calculator calculator = new Calculator();
 
-        assertEquals(8897.25, calculator.profit(company, employee));
+        Employee employee = new Employee(manager, 5);
+
+        assertEquals(8897.25, employee.profit(company.profitMargin, company.employeesCount));
     }
 
 }

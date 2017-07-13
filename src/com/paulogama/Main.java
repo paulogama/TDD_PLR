@@ -25,10 +25,10 @@ public class Main {
 
         int performance = scanner.nextInt();
 
-        Employee employee = new Employee(post, performance);
-
-        Calculator calculator = new Calculator();
-
-        System.out.println("The value of profit is -> " + calculator.profit(company, employee));
+//        Employee employee = new Employee(post, performance);
+//
+//        Calculator calculator = new Calculator();
+//
+//        System.out.println("The value of profit is -> " + calculator.profit(company, employee));
     }
 }

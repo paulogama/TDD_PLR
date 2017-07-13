@@ -14,4 +14,9 @@ class Company {
         this.employeesCount = employeesCount;
         this.profitMargin = profitMargin;
     }
+
+    Boolean isEligible() {
+        return employeesCount * 10000 < profitMargin;
+    }
+
 }
